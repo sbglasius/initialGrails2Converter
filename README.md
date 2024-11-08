@@ -52,6 +52,23 @@ If you're upgrading an application this is an example of starting the upgrade:
 ./initialGrails2Converter.groovy --type=app --version=6.2.1 --verbose application
 ``` 
 
+## Tests
+
+There is an additional script that will convert unit-tests and integration-tests. Usage should be straight forward and should save an additional bulk of work.
+
+**Warning**: These two scripts will change most (if not all) files in `src/test/groovy` and `src/integration-test/groovy` so it is suggested to do this on the upgrade branch
+
+In the `application` directory do:
+
+```bash
+../convertGrails2UnitTests.groovy src/test/groovy
+```
+
+```bash
+../convertGrails2IntegrationTests.groovy src/integration-test/groovy
+```
+
+
 ## Need help or have improvements?
 
 **bugreports, suggestions or pull-requests are welcome**
